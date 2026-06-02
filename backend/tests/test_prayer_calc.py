@@ -38,13 +38,19 @@ def test_dhuhr_near_local_noon(date: dt.date) -> None:
     assert dt.time(11, 30) <= t["dhuhr"] <= dt.time(13, 30)
 
 
-def test_hanafi_asr_is_later_than_shafi() -> None:
-    """Hanafi (shadow factor 2) Asr must fall later than Shafi (factor 1)."""
+def test_asr_factor_two_is_later_than_factor_one() -> None:
+    """Engine supports both Asr conventions: factor 2 (Hanafi) falls later than factor 1."""
     date = dt.date(2026, 6, 21)
-    hanafi = compute_times(date, *PRISHTINE, params=BIK_PARAMS)
-    shafi_params = CalcParams(asr_factor=1, offsets=BIK_PARAMS.offsets)
-    shafi = compute_times(date, *PRISHTINE, params=shafi_params)
-    assert hanafi["asr"] > shafi["asr"]
+    hanafi = CalcParams(asr_factor=2, offsets=BIK_PARAMS.offsets)
+    standard = CalcParams(asr_factor=1, offsets=BIK_PARAMS.offsets)
+    assert compute_times(date, *PRISHTINE, params=hanafi)["asr"] > (
+        compute_times(date, *PRISHTINE, params=standard)["asr"]
+    )
+
+
+def test_bik_params_use_standard_asr() -> None:
+    """BIK's published takvim uses the standard (factor-1) Asr, so that is the BIK default."""
+    assert BIK_PARAMS.asr_factor == 1
 
 
 def test_dst_shifts_wall_clock_between_winter_and_summer() -> None:

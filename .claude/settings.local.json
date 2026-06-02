@@ -16,7 +16,13 @@
       "Bash(./.venv/Scripts/python.exe --version)",
       "Bash(./.venv/Scripts/python.exe -m pytest -q)",
       "Bash(git --no-pager diff .claude/settings.local.json)",
-      "PowerShell(Set-Location 'c:\\\\Users\\\\win-ks\\\\Desktop\\\\takvimi'; docker version --format '{{.Server.Version}}' 2>&1; Write-Output \"---compose config---\"; docker compose config --quiet 2>&1; Write-Output \"exit=$LASTEXITCODE\")"
+      "PowerShell(Set-Location 'c:\\\\Users\\\\win-ks\\\\Desktop\\\\takvimi'; docker version --format '{{.Server.Version}}' 2>&1; Write-Output \"---compose config---\"; docker compose config --quiet 2>&1; Write-Output \"exit=$LASTEXITCODE\")",
+      "WebFetch(domain:bislame.net)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "PowerShell(Set-Location 'c:\\\\Users\\\\win-ks\\\\Desktop\\\\takvimi\\\\backend'; $urls = @\\('https://raw.githubusercontent.com/drilonjaha/kohet-e-namazit-kosove-json/main/kosovo-prayer-times.json','https://raw.githubusercontent.com/drilonjaha/kohet-e-namazit-kosove-json/master/kosovo-prayer-times.json'\\); foreach \\($u in $urls\\) { try { Invoke-WebRequest -Uri $u -OutFile _bik.json -ErrorAction Stop; Write-Output \"OK $u\"; break } catch { Write-Output \"FAIL $u\" } }; if \\(Test-Path _bik.json\\) { Write-Output \\(\"size=\" + \\(Get-Item _bik.json\\).Length\\) })",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "PowerShell(Set-Location 'c:\\\\Users\\\\win-ks\\\\Desktop\\\\takvimi\\\\backend'; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/drilonjaha/kohet-e-namazit-kosove-json/main/kosovo-prayer-times.json' -OutFile _bik.json; Write-Output \\(\"downloaded \" + \\(Get-Item _bik.json\\).Length + \" bytes\"\\))"
     ]
   }
 }

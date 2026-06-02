@@ -3,14 +3,15 @@
 Pure standard-library implementation (no external deps) of the well-established
 sun-position algorithm (cf. PrayTimes.org), specialised for Kosovo / BIK:
 
-* **Hanafi Asr** — shadow factor 2 (Kosovo is Hanafi-majority).
+* **Standard Asr** — shadow factor 1, as BIK's published takvim uses (the Diyanet-style "BIM
+  Kosovo" method; NOT the Hanafi factor-2 variant).
 * **Balkan / Diyanet-style twilight angles** — Fajr 18°, Isha 17°.
-* **Per-prayer minute offsets (*ihtiyat* / temkin)** — the calibration knobs that align
-  the computed times with BIK's published takvim to the minute.
+* **Per-prayer minute offsets (*ihtiyat* / temkin)** — calibration knobs.
 
-IMPORTANT (Immutable rule #1): the offsets in :data:`BIK_PARAMS` are the calibration knobs.
-They must be verified with ``python -m app.data.validate_against_bik`` against BIK's published
-times before the output is treated as official. Never present uncalibrated times as official.
+IMPORTANT: the app does NOT serve from this engine. Production prayer times are seeded directly
+from BIK's official published takvim (see :mod:`app.data.seed` / ``bik_takvim_*.json``), which
+reproduces bislame.net to the minute (Immutable rule #1). This engine is kept as a documented
+fallback/derivation tool; it approximates BIK to within a few minutes but is not exact.
 
 All angles are in degrees; all times of day are handled as fractional hours and rounded to the
 minute at the boundary.
@@ -76,7 +77,7 @@ class CalcParams:
 
     fajr_angle: float = 18.0
     isha_angle: float = 17.0
-    asr_factor: int = 2  # Hanafi
+    asr_factor: int = 1  # standard (BIM Kosovo / Diyanet); 2 = Hanafi
     rise_set_angle: float = 0.833  # sun radius + refraction at the horizon
     offsets: dict[str, int] = field(
         default_factory=lambda: {
@@ -90,13 +91,12 @@ class CalcParams:
     )
 
 
-# Parameters used to reproduce the BIK (Bashkësia Islame e Kosovës) takvim.
-# The offsets below are starting values; calibrate against validate_against_bik before
-# treating the output as official.
+# Parameters approximating the BIK (Bashkësia Islame e Kosovës) takvim, for the fallback engine.
+# BIK publishes the standard (factor-1) Asr; the offsets below model its temkin bias.
 BIK_PARAMS = CalcParams(
     fajr_angle=18.0,
     isha_angle=17.0,
-    asr_factor=2,
+    asr_factor=1,
     rise_set_angle=0.833,
     offsets={
         "imsak": 0,
