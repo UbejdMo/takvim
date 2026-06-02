@@ -1,0 +1,85 @@
+{
+  "app": {
+    "title": "Kosovo Prayer Times",
+    "subtitle": "Official prayer times — Islamic Community of Kosovo"
+  },
+  "nav": {
+    "prayer": "Prayer",
+    "calendar": "Calendar",
+    "events": "Events",
+    "qibla": "Qibla"
+  },
+  "language": {
+    "sq": "Shqip",
+    "en": "English",
+    "toggle": "Change language"
+  },
+  "city": {
+    "select": "Select city",
+    "regionKosova": "Kosovo",
+    "regionLugina": "Preševo Valley"
+  },
+  "prayers": {
+    "imsak": "Fajr (Sabahu)",
+    "sunrise": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "dayLength": "Length of day"
+  },
+  "countdown": {
+    "next": "Next prayer",
+    "remaining": "Time remaining"
+  },
+  "azan": {
+    "now": "Time for Azan"
+  },
+  "eventBanner": {
+    "today": "Today is: {{name}}"
+  },
+  "calendar": {
+    "title": "Prayer calendar",
+    "monthView": "Month",
+    "yearView": "Year",
+    "date": "Date",
+    "today": "Today",
+    "months": [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  },
+  "events": {
+    "title": "Islamic events",
+    "none": "No events for this year.",
+    "type": {
+      "day": "Day",
+      "night": "Night",
+      "holiday": "Holiday"
+    }
+  },
+  "qibla": {
+    "title": "Qibla direction",
+    "bearing": "Bearing: {{deg}}° from north",
+    "distance": "Distance to the Kaaba: {{km}} km",
+    "enable": "Enable compass",
+    "permissionDenied": "Compass access was denied.",
+    "notSupported": "Your device does not support the compass.",
+    "instruction": "Point the top of your phone toward the arrow."
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong. Please try again.",
+    "notSeeded": "Data for this date is not available."
+  }
+}

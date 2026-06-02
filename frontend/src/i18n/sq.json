@@ -1,0 +1,85 @@
+{
+  "app": {
+    "title": "Takvimi i Kosovës",
+    "subtitle": "Kohët zyrtare të namazit — Bashkësia Islame e Kosovës"
+  },
+  "nav": {
+    "prayer": "Namazi",
+    "calendar": "Kalendari",
+    "events": "Ngjarjet",
+    "qibla": "Kibla"
+  },
+  "language": {
+    "sq": "Shqip",
+    "en": "English",
+    "toggle": "Ndrysho gjuhën"
+  },
+  "city": {
+    "select": "Zgjidh qytetin",
+    "regionKosova": "Kosova",
+    "regionLugina": "Lugina e Preshevës"
+  },
+  "prayers": {
+    "imsak": "Sabahu",
+    "sunrise": "Lindja e Diellit",
+    "dhuhr": "Dreka",
+    "asr": "Ikindia",
+    "maghrib": "Akshami",
+    "isha": "Jacia",
+    "dayLength": "Gjatësia e ditës"
+  },
+  "countdown": {
+    "next": "Namazi i radhës",
+    "remaining": "Koha e mbetur"
+  },
+  "azan": {
+    "now": "Koha e Ezanit"
+  },
+  "eventBanner": {
+    "today": "Sot është: {{name}}"
+  },
+  "calendar": {
+    "title": "Kalendari i namazit",
+    "monthView": "Muaji",
+    "yearView": "Viti",
+    "date": "Data",
+    "today": "Sot",
+    "months": [
+      "Janar",
+      "Shkurt",
+      "Mars",
+      "Prill",
+      "Maj",
+      "Qershor",
+      "Korrik",
+      "Gusht",
+      "Shtator",
+      "Tetor",
+      "Nëntor",
+      "Dhjetor"
+    ]
+  },
+  "events": {
+    "title": "Ngjarjet islame",
+    "none": "Nuk ka ngjarje për këtë vit.",
+    "type": {
+      "day": "Ditë",
+      "night": "Natë",
+      "holiday": "Festë"
+    }
+  },
+  "qibla": {
+    "title": "Drejtimi i Kiblës",
+    "bearing": "Drejtimi: {{deg}}° nga veriu",
+    "distance": "Largësia deri te Qabja: {{km}} km",
+    "enable": "Aktivizo busullën",
+    "permissionDenied": "Qasja te busulla u refuzua.",
+    "notSupported": "Pajisja juaj nuk e mbështet busullën.",
+    "instruction": "Drejtoje pjesën e sipërme të telefonit drejt shigjetës."
+  },
+  "common": {
+    "loading": "Duke u ngarkuar…",
+    "error": "Ndodhi një gabim. Provoni përsëri.",
+    "notSeeded": "Të dhënat për këtë datë nuk janë në dispozicion."
+  }
+}
