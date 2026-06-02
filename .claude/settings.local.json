@@ -10,7 +10,12 @@
       "Bash(python -c ' *)",
       "Bash(git config *)",
       "Bash(python -m app.data.validate_against_bik)",
-      "Bash(echo \"exit=$?\")"
+      "Bash(echo \"exit=$?\")",
+      "Bash(python -m venv .venv)",
+      "Bash(./.venv/Scripts/python.exe -m pip install --upgrade pip -q)",
+      "Bash(./.venv/Scripts/python.exe --version)",
+      "Bash(./.venv/Scripts/python.exe -m pytest -q)",
+      "Bash(git --no-pager diff .claude/settings.local.json)"
     ]
   }
 }

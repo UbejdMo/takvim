@@ -22,12 +22,22 @@ const partsFormatter = new Intl.DateTimeFormat("en-US", {
   second: "2-digit",
 });
 
-function fields(epochMs: number): Record<string, number> {
+interface ClockFields {
+  year: number;
+  month: number;
+  day: number;
+  hour: number;
+  minute: number;
+  second: number;
+}
+
+function fields(epochMs: number): ClockFields {
   const out: Record<string, number> = {};
   for (const part of partsFormatter.formatToParts(new Date(epochMs))) {
     if (part.type !== "literal") out[part.type] = Number(part.value);
   }
-  return out;
+  // The formatter above is configured to emit all six fields.
+  return out as unknown as ClockFields;
 }
 
 /** Offset (ms) of Europe/Belgrade ahead of UTC at the given instant (handles DST). */
@@ -46,7 +56,7 @@ export function belgradeToday(epochMs: number = Date.now()): string {
 
 /** The Belgrade calendar day after `isoDate` ("YYYY-MM-DD"), as "YYYY-MM-DD". */
 export function nextDay(isoDate: string): string {
-  const [y, m, d] = isoDate.split("-").map(Number);
+  const [y = 0, m = 1, d = 1] = isoDate.split("-").map(Number);
   const next = new Date(Date.UTC(y, m - 1, d + 1));
   const pad = (n: number) => String(n).padStart(2, "0");
   return `${next.getUTCFullYear()}-${pad(next.getUTCMonth() + 1)}-${pad(next.getUTCDate())}`;
@@ -57,8 +67,8 @@ export function nextDay(isoDate: string): string {
  * `isoDate` is "YYYY-MM-DD"; `time` is "HH:MM" or "HH:MM:SS".
  */
 export function belgradeWallClockToEpoch(isoDate: string, time: string): number {
-  const [y, mo, d] = isoDate.split("-").map(Number);
-  const [h, mi, s = 0] = time.split(":").map(Number);
+  const [y = 0, mo = 1, d = 1] = isoDate.split("-").map(Number);
+  const [h = 0, mi = 0, s = 0] = time.split(":").map(Number);
   const naiveUtc = Date.UTC(y, mo - 1, d, h, mi, s);
   // Subtract the offset to land on the real instant; refine once for DST transition days.
   let epoch = naiveUtc - belgradeOffsetMs(naiveUtc);
