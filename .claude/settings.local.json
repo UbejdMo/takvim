@@ -15,7 +15,8 @@
       "Bash(./.venv/Scripts/python.exe -m pip install --upgrade pip -q)",
       "Bash(./.venv/Scripts/python.exe --version)",
       "Bash(./.venv/Scripts/python.exe -m pytest -q)",
-      "Bash(git --no-pager diff .claude/settings.local.json)"
+      "Bash(git --no-pager diff .claude/settings.local.json)",
+      "PowerShell(Set-Location 'c:\\\\Users\\\\win-ks\\\\Desktop\\\\takvimi'; docker version --format '{{.Server.Version}}' 2>&1; Write-Output \"---compose config---\"; docker compose config --quiet 2>&1; Write-Output \"exit=$LASTEXITCODE\")"
     ]
   }
 }
