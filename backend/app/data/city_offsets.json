@@ -1,0 +1,36 @@
+{
+  "_note": "Minutes added to bik_takvim_2026.json to get each city's local times. Official BIK-published offsets: prishtine/ferizaj/gjilan/podujeve/vushtrri=-1, presheve=-2. All others (incl. decan) are derived from longitude via BIK's documented ~4 min/° rule (reference basis 21°E) — within the 6-min temkin margin; refine if BIK publishes official values for them.",
+  "official_cities": [
+    "ferizaj",
+    "gjilan",
+    "podujeve",
+    "presheve",
+    "prishtine",
+    "vushtrri"
+  ],
+  "offsets": {
+    "prishtine": -1,
+    "prizren": 1,
+    "peje": 3,
+    "gjakove": 2,
+    "gjilan": -1,
+    "ferizaj": -1,
+    "mitrovice": 1,
+    "vushtrri": -1,
+    "podujeve": -1,
+    "suhareke": 1,
+    "rahovec": 1,
+    "lipjan": -1,
+    "kacanik": -1,
+    "dragash": 1,
+    "decan": 3,
+    "istog": 2,
+    "kline": 2,
+    "skenderaj": 1,
+    "kamenice": -2,
+    "viti": -1,
+    "presheve": -2,
+    "bujanoc": -3,
+    "medvegje": -2
+  }
+}
