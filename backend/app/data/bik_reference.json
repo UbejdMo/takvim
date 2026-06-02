@@ -1,0 +1,15 @@
+{
+  "_note": "Official BIK Prishtinë reference times for validation. Fill each date with the exact values published at bislame.net/takvimi (24h HH:MM). null = not yet transcribed. Then run: python -m app.data.validate_against_bik",
+  "city": "prishtine",
+  "times": {
+    "2026-01-15": null,
+    "2026-02-19": null,
+    "2026-03-21": null,
+    "2026-04-15": null,
+    "2026-06-02": null,
+    "2026-06-21": null,
+    "2026-09-23": null,
+    "2026-11-10": null,
+    "2026-12-21": null
+  }
+}

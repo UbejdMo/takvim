@@ -1,0 +1,119 @@
+[
+  {
+    "date": "2026-01-15",
+    "hijri_label": "27 Rexheb 1447",
+    "name_sq": "Nata e Miraxhit",
+    "name_en": "Night of Mi'raj",
+    "type": "night",
+    "description_sq": "Nata e Miraxhit — udhëtimi i natës dhe ngjitja e Pejgamberit a.s.",
+    "description_en": "The Night Journey and Ascension of the Prophet (peace be upon him)."
+  },
+  {
+    "date": "2026-02-02",
+    "hijri_label": "15 Shaban 1447",
+    "name_sq": "Nata e Beratit",
+    "name_en": "Mid-Sha'ban (Berat)",
+    "type": "night",
+    "description_sq": "Nata e Beratit — nata e mesit të muajit Shaban, nata e faljes.",
+    "description_en": "The night of mid-Sha'ban, a night of forgiveness."
+  },
+  {
+    "date": "2026-02-18",
+    "hijri_label": "29 Shaban 1447",
+    "name_sq": "Nata e parë e Ramazanit",
+    "name_en": "Eve of Ramadan",
+    "type": "night",
+    "description_sq": "Mbrëmja para fillimit të agjërimit të Ramazanit.",
+    "description_en": "The eve before the start of the fast of Ramadan."
+  },
+  {
+    "date": "2026-02-19",
+    "hijri_label": "1 Ramazan 1447",
+    "name_sq": "Dita e parë e Ramazanit",
+    "name_en": "First day of Ramadan",
+    "type": "day",
+    "description_sq": "Fillimi i muajit të agjërimit, Ramazanit.",
+    "description_en": "The beginning of the month of fasting, Ramadan."
+  },
+  {
+    "date": "2026-03-16",
+    "hijri_label": "27 Ramazan 1447",
+    "name_sq": "Nata e Kadrit",
+    "name_en": "Night of Qadr",
+    "type": "night",
+    "description_sq": "Nata e Kadrit — nata më e mirë se një mijë muaj.",
+    "description_en": "The Night of Decree, better than a thousand months."
+  },
+  {
+    "date": "2026-03-19",
+    "hijri_label": "29 Ramazan 1447",
+    "name_sq": "Nata e Fitër Bajramit",
+    "name_en": "Eve of Eid al-Fitr",
+    "type": "night",
+    "description_sq": "Mbrëmja para Fitër Bajramit.",
+    "description_en": "The eve of Eid al-Fitr."
+  },
+  {
+    "date": "2026-03-20",
+    "hijri_label": "1 Sheval 1447",
+    "name_sq": "Fitër Bajrami",
+    "name_en": "Eid al-Fitr",
+    "type": "holiday",
+    "description_sq": "Fitër Bajrami — festa e përfundimit të agjërimit të Ramazanit.",
+    "description_en": "The festival marking the end of Ramadan."
+  },
+  {
+    "date": "2026-05-26",
+    "hijri_label": "9 Dhul-hixhe 1447",
+    "name_sq": "Nata e Kurban Bajramit",
+    "name_en": "Eve of Eid al-Adha",
+    "type": "night",
+    "description_sq": "Mbrëmja para Kurban Bajramit (dita e Arefatit).",
+    "description_en": "The eve of Eid al-Adha (day of Arafah)."
+  },
+  {
+    "date": "2026-05-27",
+    "hijri_label": "10 Dhul-hixhe 1447",
+    "name_sq": "Kurban Bajrami",
+    "name_en": "Eid al-Adha",
+    "type": "holiday",
+    "description_sq": "Kurban Bajrami — festa e kurbanit.",
+    "description_en": "The festival of the sacrifice."
+  },
+  {
+    "date": "2026-06-16",
+    "hijri_label": "1 Muharrem 1448",
+    "name_sq": "Viti i Ri Islamik 1448",
+    "name_en": "Islamic New Year 1448",
+    "type": "day",
+    "description_sq": "Fillimi i vitit të ri hënor islamik 1448.",
+    "description_en": "The start of the Islamic lunar year 1448."
+  },
+  {
+    "date": "2026-06-25",
+    "hijri_label": "10 Muharrem 1448",
+    "name_sq": "Ashura",
+    "name_en": "Ashura",
+    "type": "day",
+    "description_sq": "Dita e Ashures — dita e dhjetë e muajit Muharrem.",
+    "description_en": "The tenth day of Muharram."
+  },
+  {
+    "date": "2026-08-25",
+    "hijri_label": "12 Rebiul-evel 1448",
+    "name_sq": "Mevludi",
+    "name_en": "Mawlid",
+    "type": "day",
+    "description_sq": "Mevludi — ditëlindja e Pejgamberit Muhammed a.s.",
+    "description_en": "The birth of the Prophet Muhammad (peace be upon him)."
+  },
+  {
+    "date": "2026-12-10",
+    "hijri_label": "1 Rexheb 1448",
+    "name_sq": "Nata e Regaibit",
+    "name_en": "Night of Ragha'ib",
+    "type": "night",
+    "description_sq": "Nata e Regaibit — nata e parë e xhumasë në muajin Rexheb.",
+    "description_en": "The first Friday eve of the month of Rajab."
+  }
+]
