@@ -6,9 +6,10 @@ All values can be overridden through environment variables (see .env.example).
 from __future__ import annotations
 
 from functools import lru_cache
+from typing import Annotated
 
 from pydantic import field_validator
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
 class Settings(BaseSettings):
@@ -24,7 +25,12 @@ class Settings(BaseSettings):
     default_city: str = "prishtine"
 
     # --- CORS ---
-    cors_origins: list[str] = ["http://localhost:5173", "http://localhost:4173"]
+    # NoDecode: keep pydantic-settings from JSON-decoding the env value so the validator below
+    # can parse the comma-separated CORS_ORIGINS that docker-compose passes.
+    cors_origins: Annotated[list[str], NoDecode] = [
+        "http://localhost:5173",
+        "http://localhost:4173",
+    ]
 
     @field_validator("cors_origins", mode="before")
     @classmethod

@@ -46,16 +46,18 @@ npm run dev
   PostgreSQL.
 - **Frontend** — React + TypeScript (strict), Vite, react-i18next, TanStack Query.
 
-Prayer times are produced by an astronomical calculation engine (`app/services/prayer_calc.py`)
-configured to reproduce BIK's published times: **Hanafi Asr**, Balkan/Diyanet-style Fajr–Isha
-twilight angles, plus per-prayer minute offsets (*ihtiyat*). Times are computed once and
-**seeded into Postgres** — the app never calls an external service at request time.
+Prayer times are **seeded directly from BIK's official published takvim**: a committed Kosovo
+reference table (`backend/app/data/bik_takvim_2026.json`, from the official BIK /
+dituriaislame.com PDF) plus per-city minute offsets (`backend/app/data/city_offsets.json`).
+Method: BIM Kosovo — Fajr 18°, Isha 17°, 6-min temkin, **standard (factor-1) Asr**. Everything is
+**seeded into Postgres** — the app never calls an external service at request time. The
+astronomical engine (`app/services/prayer_calc.py`) is kept only as a documented fallback.
 
 ## Non-negotiable rules
 
-1. Prayer-time accuracy is sacred. `python -m app.data.validate_against_bik` checks the
-   generated Prishtinë times against BIK's published takvim for sample dates across the year;
-   **never present uncalibrated/unvalidated times as official.**
+1. Prayer-time accuracy is sacred. `python -m app.data.validate_against_bik` asserts the seeded
+   Prishtinë times match BIK's published takvim for sample dates across the year;
+   **never present unvalidated times as official.**
 2. Times and events are served from Postgres, never a live third-party call.
 3. Albanian first; English complete; no hardcoded UI strings (everything via i18n).
 4. No authentication, accounts, or notifications — out of scope.
